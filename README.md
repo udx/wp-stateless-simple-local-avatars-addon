@@ -4,7 +4,7 @@ Provides compatibility between the [Simple Local Avatars](https://wordpress.org/
 
 ### Features
 
-* For `CDN` and `Stateless` modes filter specific user meta to redirect avatar images to Google Cloud Storage. 
+* For `CDN`, `Ephemeral` and `Stateless` modes filter specific user meta to redirect avatar images to Google Cloud Storage. 
 
 ### Notes
 

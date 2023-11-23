@@ -10,7 +10,6 @@ class SimpleLocalAvatars extends Compatibility {
   protected $constant = 'WP_STATELESS_COMPATIBILITY_SLA';
   protected $description = 'Ensures compatibility with Simple Local Avatars plugin.';
   protected $plugin_file = 'simple-local-avatars/simple-local-avatars.php';
-  protected $sm_mode_not_supported = ['stateless'];
 
   /**
    * Initialize compatibility module
@@ -19,7 +18,7 @@ class SimpleLocalAvatars extends Compatibility {
    */
   public function module_init($sm) {
     // Only makes sense in CDN or Ephemeral modes
-    if (in_array($sm['mode'], ['cdn', 'ephemeral'])) {
+    if (in_array($sm['mode'], ['cdn', 'ephemeral', 'stateless'])) {
       add_filter('get_user_metadata', array($this, 'get_user_metadata'), 10, 4);
     }
   }
