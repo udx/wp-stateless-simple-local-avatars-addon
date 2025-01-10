@@ -1,6 +1,6 @@
 <?php
 
-namespace WPSL\SimpleLocalAvatars;
+namespace SLCA\SimpleLocalAvatars;
 
 use PHPUnit\Framework\TestCase;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
@@ -49,17 +49,43 @@ class ClassSimpleLocalAvatarsTest extends TestCase {
   public function testShouldInitHooks() {
     $simpleLocalAvatars = new SimpleLocalAvatars();
 
-    $simpleLocalAvatars->module_init([ 'mode' => 'cdn' ]);
+    ud_get_stateless_media()->set('sm.mode', 'cdn');
+    $simpleLocalAvatars->module_init([]);
 
+    self::assertNotFalse( has_action('updated_user_meta', [ $simpleLocalAvatars, 'updated_user_meta' ]) );
     self::assertNotFalse( has_filter('get_user_metadata', [ $simpleLocalAvatars, 'get_user_metadata' ]) );
   }
 
-  public function testShouldNotInitHooks() {
+  public function testShouldInitHooksBackup() {
     $simpleLocalAvatars = new SimpleLocalAvatars();
 
-    $simpleLocalAvatars->module_init([ 'mode' => 'backup' ]);
+    ud_get_stateless_media()->set('sm.mode', 'backup');
+    $simpleLocalAvatars->module_init([]);
 
+    self::assertNotFalse( has_action('updated_user_meta', [ $simpleLocalAvatars, 'updated_user_meta' ]) );
     self::assertFalse( has_filter('get_user_metadata', [ $simpleLocalAvatars, 'get_user_metadata' ]) );
+  }
+
+  public function testShouldCountHooks() {
+    $simpleLocalAvatars = new SimpleLocalAvatars();
+
+    ud_get_stateless_media()->set('sm.mode', 'cdn');
+
+    Functions\expect('add_action')->times(1);
+    Functions\expect('add_filter')->times(1);
+
+    $simpleLocalAvatars->module_init([]);
+  }
+
+  public function testShouldCountHooksBackup() {
+    $simpleLocalAvatars = new SimpleLocalAvatars();
+
+    ud_get_stateless_media()->set('sm.mode', 'backup');
+
+    Functions\expect('add_action')->times(1);
+    Functions\expect('add_filter')->times(0);
+
+    $simpleLocalAvatars->module_init([]);
   }
 
   public function testShouldGetUserMetadata() {
