@@ -1,11 +1,11 @@
 === WP-Stateless - Simple Local Avatars Addon ===
-Contributors: usability_dynamics, andypotanin, ideric, maxim.peshkov, planvova, obolgun
+Contributors: usability_dynamics, andypotanin, ideric, planvova, obolgun
 Donate link: https://udx.io
-Tags: avatar, gravatar, user photos, google, google cloud, google cloud storage, cdn, uploads, media, stateless, backup
+Tags: simple local avatars, simple local avatars addon extension, google cloud storage, stateless, wp-stateless
 License: GPLv2 or later
 Requires PHP: 8.0
 Requires at least: 5.0
-Tested up to: 6.4.1
+Tested up to: 6.7.1
 Stable tag: 0.0.1
 
 Provides compatibility between the Simple Local Avatars and the WP-Stateless plugins.
@@ -20,7 +20,7 @@ Provides compatibility between the [Simple Local Avatars](https://wordpress.org/
 
 = Notes =
 
-* Tested with Simple Local Avatars version 2.7.5
+* Tested with Simple Local Avatars version 2.8.3
 
 = Support, Feedback, & Contribute =
 
