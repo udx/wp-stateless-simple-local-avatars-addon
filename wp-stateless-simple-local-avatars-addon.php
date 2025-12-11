@@ -5,7 +5,7 @@
  * Plugin URI: https://stateless.udx.io/addons/simple-local-avatars/
  * Description: Provides compatibility between the Simple Local Avatars and the WP-Stateless plugins.
  * Author: UDX
- * Version: 0.0.1
+ * Version: 0.0.2
  * Text Domain: wp-stateless-simple-local-avatars-addon
  * Author URI: https://udx.io
  * License: GPLv2 or later
