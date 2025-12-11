@@ -5,8 +5,8 @@ Tags: simple local avatars, simple local avatars addon extension, google cloud s
 License: GPLv2 or later
 Requires PHP: 8.0
 Requires at least: 5.0
-Tested up to: 6.8
-Stable tag: 0.0.1
+Tested up to: 6.9
+Stable tag: 0.0.2
 
 Provides compatibility between the Simple Local Avatars and the WP-Stateless plugins.
 
@@ -20,7 +20,15 @@ Provides compatibility between the [Simple Local Avatars](https://wordpress.org/
 
 = Notes =
 
-* Tested with Simple Local Avatars version 2.8.3
+* Tested with Simple Local Avatars version 2.8.5
+
+== Changelog ==
+
+= 0.0.2 =
+- FIX: PHP warning on empty user meta value.
+
+= 0.0.1 =
+* Initial public release.
 
 = Support, Feedback, & Contribute =
 

@@ -1,3 +1,7 @@
+#### 0.0.2
+
+- FIX: PHP warning on empty user meta value.
+
 #### 0.0.1
 
 - Initial public release.
