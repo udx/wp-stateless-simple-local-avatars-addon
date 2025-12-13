@@ -15,5 +15,6 @@ on:
         required: false
 
 jobs:
-  uses: udx/wp-stateless-woocommerce-extra-product-options-addon/.github/workflows/publish-release.yml@develop-alexey
+  release:
+    uses: udx/wp-stateless-woocommerce-extra-product-options-addon/.github/workflows/publish-release.yml@develop-alexey
   
