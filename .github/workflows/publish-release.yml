@@ -3,6 +3,10 @@ run-name: Publish Release
 
 on:
   workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag (e.g. 1.2.3a)'
+        required: true
 
 jobs:
   uses: udx/wp-stateless-woocommerce-extra-product-options-addon/.github/workflows/publish-release.yml@develop-alexey
