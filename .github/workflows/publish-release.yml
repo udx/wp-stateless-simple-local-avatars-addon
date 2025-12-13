@@ -7,6 +7,12 @@ on:
       tag:
         description: 'Release tag (e.g. 1.2.3a)'
         required: true
+      version:
+        description: 'Release version (e.g. 1.2.3), default: latest'
+        required: false
+      prerelease:
+        description: 'Pre-release version (e.g. RC1, beta, etc...)'
+        required: false
 
 jobs:
   uses: udx/wp-stateless-woocommerce-extra-product-options-addon/.github/workflows/publish-release.yml@develop-alexey
