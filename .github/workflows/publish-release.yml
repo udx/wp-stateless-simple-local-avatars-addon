@@ -1,3 +1,6 @@
+name: Publish Release
+run-name: Publish Release
+
 jobs:
   uses: udx/wp-stateless-woocommerce-extra-product-options-addon/.github/workflows/publish-release.yml@develop-alexey
   
