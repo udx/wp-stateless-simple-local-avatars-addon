@@ -20,4 +20,9 @@ permissions:
 jobs:
   release:
     uses: udx/wp-stateless-woocommerce-extra-product-options-addon/.github/workflows/publish-release.yml@develop-alexey
-  
+    with:
+      tag: ${{ github.event.inputs.tag }}
+      version: ${{ github.event.inputs.version }}
+      prerelease: ${{ github.event.inputs.prerelease }}
+    secrets:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
