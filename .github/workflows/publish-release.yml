@@ -19,7 +19,7 @@ permissions:
 
 jobs:
   release:
-    uses: udx/reusable-workflows/.github/workflows/wp-gh-release-ops.yml@develop-alexey
+    uses: udx/reusable-workflows/.github/workflows/wp-gh-release-ops.yml@main
     with:
       tag: ${{ github.event.inputs.tag }}
       version: ${{ github.event.inputs.version }}
