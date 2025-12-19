@@ -1,3 +1,7 @@
+#### 0.0.2
+
+- FIX: PHP warning on empty user meta value [823](https://github.com/udx/wp-stateless/issues/823).
+
 #### 0.0.1
 
 - Initial public release.

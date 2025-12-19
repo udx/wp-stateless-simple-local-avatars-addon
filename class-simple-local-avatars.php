@@ -64,7 +64,7 @@ class SimpleLocalAvatars extends Compatibility {
     }
 
     // Return filtered data back
-    return $user_meta;
+    return empty($user_meta) ? null : $user_meta;
   }
 
   /**

@@ -8,7 +8,7 @@ Provides compatibility between the [Simple Local Avatars](https://wordpress.org/
 
 ### Notes
 
-* Tested with Simple Local Avatars version 2.8.3
+* Tested with Simple Local Avatars version 2.8.5
 
 ### Support, Feedback, & Contribute
 
